@@ -10,7 +10,7 @@ int prompt()
 
 	scanf("%s", buffer);
 
-	if(strcmp(check,buffer)!= 0) return 0;
+	if(strcmp(check,buffer) == 0) return 0;
 	else return 1;
 }
 
