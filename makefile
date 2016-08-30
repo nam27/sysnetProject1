@@ -5,4 +5,4 @@ myShell.o: myShell.c
 	gcc -c myShell.c -Wall
 
 clean:
-	rm *.o 
+	rm *.o myShell
