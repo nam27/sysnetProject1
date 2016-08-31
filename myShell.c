@@ -10,8 +10,10 @@ int main()
 	char *check = "exit\n";
 	size_t bufsize = 100;
 
-	buffer = (char *)malloc(sizeof(char)*bufsize);
+	buffer = (char *)malloc(sizeof(char)*bufsize); // Dynamically allocated so buffer may be passed between functions/files
 
+
+	// Ask for user input until an exit condition is reached
 	while(i == 0)
 	{
 		
@@ -21,7 +23,7 @@ int main()
 
 		printf("%s\n", buffer);
 
-		if(strcmp(check,buffer)== 0)
+		if(strcmp(check,buffer)== 0) // Exit Condition
 		{
 			i = -1;
 		}
@@ -32,7 +34,7 @@ int main()
 	}
 
 	
-	free(buffer);
+	free(buffer); // Free memory allocated for the buffer
 
 	
 }
