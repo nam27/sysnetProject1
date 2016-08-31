@@ -29,7 +29,7 @@ int main()
 		}
 		else
 		{
-			printf("Run...\n");			
+			//Call Parse.c functions to handle input
 		}
 	}
 
