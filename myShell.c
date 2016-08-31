@@ -2,24 +2,39 @@
 #include <stdlib.h>
 #include <string.h>
 
-int prompt()
-{
-	char *buffer = NULL;
-	char *check = "exit";
-	
-	printf("Please Enter Command: ");
-
-	scanf("%s", buffer);
-
-	if(strcmp(check,buffer)!= 0) return 0;
-	else return 1;
-}
 
 int main()
 {
-	prompt();
+	int i = 0;
+	char *buffer;
+	char *check = "exit\n";
+	size_t bufsize = 100;
+
+	buffer = (char *)malloc(sizeof(char)*bufsize); // Dynamically allocated so buffer may be passed between functions/files
+
+
+	// Ask for user input until an exit condition is reached
+	while(i == 0)
+	{
+		
+		printf("Please Enter Command: ");
+
+		fgets(buffer, bufsize, stdin);
+
+		printf("%s\n", buffer);
+
+		if(strcmp(check,buffer)== 0) // Exit Condition
+		{
+			i = -1;
+		}
+		else
+		{
+			//Call Parse.c functions to handle input
+		}
+	}
+
 	
-	
+	free(buffer); // Free memory allocated for the buffer
 
 	
 }
